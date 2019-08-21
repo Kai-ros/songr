@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>All Albums</title>
+</head>
+    <body>
+        <h1>All the Albums!</h1>
+
+        <div th:each="album : ${albums}" class="album">
+            <h3 th:id="${album.title}" th:text="${album.title}">Album Title</h3>
+            <p>
+                Created by <span th:text="${album.artist}"></span>
+            </p>
+        </div>
+
+        <div>
+            <form method="POST" action="/albums">
+                Title: <input name="title" />
+                Artist: <input name="artist" />
+                Song Count: <input name="songCount" />
+                Length: <input name="length">
+                Image: <input name="imageUrl" />
+                <input type="submit" />
+            </form>
+        </div>
+    </body>
+</html>
+
+
