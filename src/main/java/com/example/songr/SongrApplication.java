@@ -10,8 +10,6 @@ public class SongrApplication
 	public static void main(String[] args)
 	{
 		SpringApplication.run(SongrApplication.class, args);
-
-
 	}
 
 }
