@@ -8,9 +8,9 @@
         <h1>All the Albums!</h1>
 
         <div th:each="album : ${albums}" class="album">
-            <h3 th:id="${album.title}" th:text="${album.title}">Album Title</h3>
+            <a th:href=""><h3  th:id="${album.title}" th:text="${album.title}">Album Title</h3></a>
             <p>
-                <a th:href="${ '/songs/' + album.song.id}">Performed by <span th:text="${album.song}"></span></a>
+                Songs: <span th:each="song:${album.songs}" th:text="${song.title}"></span>
             </p>
         </div>
 
